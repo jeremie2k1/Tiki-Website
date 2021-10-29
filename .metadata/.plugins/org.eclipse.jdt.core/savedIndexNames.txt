@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\ADMIN\Desktop\SecondYear\EcommerceSellingBook\.metadata\.plugins\org.eclipse.jdt.core
+4099444085.index
+1713407203.index
+2683551331.index
