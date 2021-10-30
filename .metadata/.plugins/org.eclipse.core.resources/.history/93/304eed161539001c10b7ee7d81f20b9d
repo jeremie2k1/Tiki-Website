@@ -1,0 +1,10 @@
+package TikiShopMVC.Service.User;
+
+import TikiShopMVC.Dto.PaginateDto;
+
+public class PaginateService {
+	public PaginateDto GetInforPaginate() {
+		PaginateDto paginate = new PaginateDto();
+		return paginate;
+	}
+}

@@ -1,7 +1,6 @@
 package TikiShopMVC.Entity;
 
 public class Category {
-
 	private String id;
 	private String name;
 	private String description;
@@ -26,6 +25,4 @@ public class Category {
 	public void setDescription(String description) {
 		this.description = description;
 	}
-	
-	
 }

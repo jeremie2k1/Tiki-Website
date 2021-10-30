@@ -1,0 +1,20 @@
+package TikiShopMVC.Controller.User;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+import TikiShopMVC.Service.User.CategoryImplService;
+
+@Controller
+public class CategoryController extends BaseController {
+	private CategoryImplService categoryService;
+	
+	@RequestMapping(value = "/category/{id}")
+	public ModelAndView Product(@PathVariable String id) {
+		_mvShare.setViewName("user/products/category");
+		_mvShare.addObject("AllProductsById", categoryService.GetProductsById(Integer.parseInt(id))); 
+		return _mvShare;
+	}
+}

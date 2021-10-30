@@ -1,0 +1,20 @@
+package TikiShopMVC.Service.User;
+
+import org.springframework.stereotype.Service;
+
+import TikiShopMVC.Dto.PaginateDto;
+
+@Service
+public class PaginateImplService {
+	public PaginateDto GetInforPaginate(int totalData, int limit, int currentPage) {
+		PaginateDto paginate = new PaginateDto();
+		paginate.setCurrentPage(currentPage);
+		paginate.setLimit(limit);
+		paginate.setTotalPage(totalData);
+		
+		return paginate;
+	}
+
+	private int SetInforTotalPage(int totalData)
+
+}

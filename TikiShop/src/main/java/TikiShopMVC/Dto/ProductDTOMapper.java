@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 
 public class ProductDTOMapper implements RowMapper<ProductDTO>{
-
 	public ProductDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
 		ProductDTO products = new ProductDTO();
 		products.setId_product(rs.getLong("id"));
@@ -29,5 +28,4 @@ public class ProductDTOMapper implements RowMapper<ProductDTO>{
 		products.setImage(rs.getString("image"));
 		return products;
 	}
-
 }

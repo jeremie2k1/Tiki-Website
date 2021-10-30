@@ -1,0 +1,22 @@
+package TikiShopMVC.Dao;
+
+import java.util.List;
+
+import org.springframework.stereotype.Repository;
+
+import TikiShopMVC.Dto.ProductDTO;
+import TikiShopMVC.Dto.ProductDTOMapper;
+
+@Repository
+public class ProductDao extends BaseDao {
+	public List<ProductDTO> getDataHighlightProducts() {
+		String hightlight = "SELECT * FROM products WHERE products.highlight = true ORDER BY rand() LIMIT 9";
+		List<ProductDTO> listProducts = _jdbcTemplate.query(hightlight, new ProductDTOMapper());
+		return listProducts;
+	}
+	public List<ProductDTO> getDataNewProducts() {
+		String new_product = "SELECT * FROM products products.new_product = true ORDER BY rand() LIMIT 12";
+		List<ProductDTO> listProducts = _jdbcTemplate.query(new_product, new ProductDTOMapper());
+		return listProducts;
+	}
+}

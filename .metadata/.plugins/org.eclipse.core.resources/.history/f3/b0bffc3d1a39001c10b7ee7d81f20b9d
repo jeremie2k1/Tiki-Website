@@ -1,0 +1,9 @@
+package TikiShopMVC.Service.User;
+
+import java.util.List;
+
+import TikiShopMVC.Dto.ProductDTO;
+
+public interface ICategoryService {
+	public List<ProductDTO> GetDataProductsPaginate(int start, int end, int id);
+}

@@ -1,13 +1,18 @@
 USE Tiki;
 
+USE Tiki;
 INSERT INTO slides (img, caption, content)
-VALUES ('carousel1.png', 'Bootstrap Ecommerce template', 'Compitable to many opensource cart');
+VALUES ('slide_1.jpg', 'Fantasy and sci-fi novels', 'Best of Duncan M. Hamilton');
 INSERT INTO slides (img, caption, content)
-VALUES ('bootstrap_free-ecommerce.png', 'Slide 2', 'Very clean simple to use');
+VALUES ('slide_2.jpg', 'Naturals book', 'Best selling');
 INSERT INTO slides (img, caption, content)
-VALUES ('carousel3.png', 'Slide 3', 'Highly Google seo friendly');
+VALUES ('slide_3.jpg', 'Comics for children', 'Best of Comics');
 INSERT INTO slides (img, caption, content)
-VALUES ('bootstrap-templates.png', 'Slide 4', 'Compitable to many client');
+VALUES ('slide_4.jpg', 'Rise of the Shadow Dragons', 'Best of Liz Flanagan');
+INSERT INTO slides (img, caption, content)
+VALUES ('slide_5.jpg', 'Exciting New Reads!', 'Best of Penguin');
+
+
 
 USE Tiki;
 INSERT INTO category (id, name, description)

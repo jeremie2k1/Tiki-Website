@@ -1,0 +1,25 @@
+1635524739561	Delete element
+1635524744143	Delete element
+1635524798847	Delete element
+1635524802203	Delete element
+1635524876481	Delete element
+1635524879844	Delete element
+1635524930997	Delete element
+1635525168439	Delete element
+1635525239650	Rename type 'BaseDao'
+1635525313493	Delete element
+1635525330580	Rename type 'CategoryDao'
+1635525406557	Rename type 'Categories'
+1635525449336	Rename type 'CategoriesMapper'
+1635525472845	Delete element
+1635525493664	Rename type 'MenuDao'
+1635525556120	Rename type 'Menus'
+1635525574858	Rename type 'MenusMapper'
+1635525587915	Delete element
+1635525595656	Rename type 'ProductDAO'
+1635525667814	Rename type 'ProductsDTO'
+1635525687331	Rename type 'ProductsDTOMapper'
+1635525700631	Delete element
+1635525813711	Rename type 'SlidesDao'
+1635552328361	Rename type 'PaginateService'
+1635552358425	Rename type 'PaginateServiceImpl'

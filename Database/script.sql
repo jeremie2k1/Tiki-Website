@@ -52,4 +52,4 @@ CREATE TABLE menu (
 );
 
 USE Tiki;
-SELECT * FROM Products ORDER BY rand()
+SELECT * FROM slides

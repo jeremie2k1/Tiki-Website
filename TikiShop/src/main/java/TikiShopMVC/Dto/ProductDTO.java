@@ -135,6 +135,4 @@ public class ProductDTO {
 	public void setImage(String image) {
 		this.image = image;
 	}
-	
-	
 }

@@ -10,8 +10,7 @@ import TikiShopMVC.Entity.CategoryMapper;
 
 @Repository
 public class CategoryDao extends BaseDao{
-	
-	public List<Category> GetDataCategory(){
+	public List<Category> getDataCategory(){
 		List<Category> list = new ArrayList<Category>();
 		String sql = "SELECT * FROM category";
 		list = _jdbcTemplate.query(sql, new CategoryMapper());

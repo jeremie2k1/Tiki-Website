@@ -13,8 +13,8 @@ Body Section
 			<div class="well well-small">
 				<ul class="nav nav-list">
 
-					<c:forEach var="item" items="${ categorys }">
-						<li><a href="/san-pham/${ item.id }"><span
+					<c:forEach var="item" items="${ categories }">
+						<li><a href="<c:url value="/category/${ item.id }"/>"><span
 								class="icon-circle-blank"></span> ${ item.name }</a></li>
 						<li>
 					</c:forEach>
@@ -41,53 +41,24 @@ Body Section
 			<a class="shopBtn btn-block" href="#">Upcoming products <br>
 				<small>Click to view</small></a> <br> <br>
 			<ul class="nav nav-list promowrapper">
-				<li>
-					<div class="thumbnail">
-						<a class="zoomTool" href="product_details.html"
-							title="add to cart"><span class="icon-search"></span> QUICK
-							VIEW</a> <img
-							src="<c:url value="/assets/user/img/bootstrap-ecommerce-templates.png"/>"
-							alt="bootstrap ecommerce templates">
-						<div class="caption">
-							<h4>
-								<a class="defaultBtn" href="product_details.html">VIEW</a> <span
-									class="pull-right">$22.00</span>
-							</h4>
+				<c:forEach var="item" items="${ sideProduct }" varStatus="loop">
+					<li>
+						<div class="thumbnail">
+							<a class="zoomTool" href="product_details.html"
+								title="add to cart"><span class="icon-search"></span> QUICK VIEW</a> <img
+								src="<c:url value="/assets/user_interface/bookImgs/${ item.image }"/>"
+								alt="bootstrap ecommerce templates">
+							<div class="caption-side">
+								<h4>
+									<a class="defaultBtn" href="product_details.html">VIEW</a> <span
+										class="pull-right">$ ${item.price}</span> 
+								</h4>
+							</div>
 						</div>
-					</div>
-				</li>
-				<li style="border: 0">&nbsp;</li>
-				<li>
-					<div class="thumbnail">
-						<a class="zoomTool" href="product_details.html"
-							title="add to cart"><span class="icon-search"></span> QUICK
-							VIEW</a> <img
-							src="<c:url value="/assets/user/img/shopping-cart-template.png"/>"
-							alt="shopping cart template">
-						<div class="caption">
-							<h4>
-								<a class="defaultBtn" href="product_details.html">VIEW</a> <span
-									class="pull-right">$22.00</span>
-							</h4>
-						</div>
-					</div>
-				</li>
-				<li style="border: 0">&nbsp;</li>
-				<li>
-					<div class="thumbnail">
-						<a class="zoomTool" href="product_details.html"
-							title="add to cart"><span class="icon-search"></span> QUICK
-							VIEW</a> <img
-							src="<c:url value="/assets/user/img/bootstrap-template.png"/>"
-							alt="bootstrap template">
-						<div class="caption">
-							<h4>
-								<a class="defaultBtn" href="product_details.html">VIEW</a> <span
-									class="pull-right">$22.00</span>
-							</h4>
-						</div>
-					</div>
-				</li>
+					</li>
+					<li style="border: 0">&nbsp;</li>
+				</c:forEach>
+				
 			</ul>
 
 		</div>
@@ -104,8 +75,8 @@ Body Section
 								<div class="item">
 							</c:if>
 							<img style="width: 100%"
-								src="<c:url value="/assets/user/img/slide/${ item.img }"/>"
-								alt="bootstrap ecommerce templates">
+								src="<c:url value="/assets/user_interface/img/slides/${ item.img }"/>"
+								alt="banner">
 							<div class="carousel-caption">
 								<h4>${ item.caption }</h4>
 								<p>
@@ -130,10 +101,10 @@ New Products
 			<div class="row-fluid">
 				<div id="newProductCar" class="carousel slide">
 					<div class="carousel-inner">
-					<c:if test="${ products.size() > 0 }">
+					<c:if test="${ news.size() > 0 }">
 						<div class="item active">
 							<ul class="thumbnails">
-							<c:forEach var="item" items="${ products }" varStatus="loop">
+							<c:forEach var="item" items="${ news }" varStatus="loop">
 								<li class="span3">
 									<div class="thumbnail">
 										<a class="zoomTool" href="product_details.html"
@@ -142,10 +113,10 @@ New Products
 											src="<c:url value="/assets/user_interface/bookImgs/${ item.image }"/>" alt=""></a>
 									</div>
 								</li>
-								<c:if test="${ (loop.index + 1) % 4 == 0 || (loop.index + 1)  == products.size() }">
+								<c:if test="${ (loop.index + 1) % 4 == 0 || (loop.index + 1)  == news.size() }">
 										</ul>
 									</div>
-									<c:if test="${ (loop.index + 1) < products.size() }">
+									<c:if test="${ (loop.index + 1) < news.size() }">
 										<div class="item">
 											<ul class="thumbnails">
 									</c:if>
@@ -190,7 +161,7 @@ New Products
 										<a class="defaultBtn" href="product_details.html"
 											title="Click to view"><span class="icon-zoom-in"></span></a> <a
 											class="shopBtn" href="#" title="add to cart"><span
-											class="icon-plus"></span></a> <span class="pull-right"><fmt:formatNumber type="number" groupingUsed="true" value="${ item.price }" />	 $</span>
+											class="icon-plus"></span></a> <span class="pull-right">$ ${ item.price }</span>
 									</h4>
 								</div>
 							</div>

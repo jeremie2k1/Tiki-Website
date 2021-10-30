@@ -6,7 +6,6 @@ import java.sql.SQLException;
 import org.springframework.jdbc.core.RowMapper;
 
 public class MenuMapper implements RowMapper<Menu>{
-
 	public Menu mapRow(ResultSet rs, int rowNum) throws SQLException {
 		Menu menu = new Menu();
 		menu.setId(rs.getInt("id"));
@@ -14,5 +13,4 @@ public class MenuMapper implements RowMapper<Menu>{
 		menu.setUrl(rs.getString("url"));
 		return menu;
 	}
-	
 }

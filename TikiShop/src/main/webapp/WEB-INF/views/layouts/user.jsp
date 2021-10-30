@@ -27,6 +27,7 @@
 <!-- Favicons -->
 <link rel="shortcut icon"
 	href="<c:url value="/assets/user_interface/ico/favicon.ico"/>">
+<decorator:head/>
 </head>
 <body>
 	<!-- 

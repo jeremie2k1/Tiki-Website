@@ -1,0 +1,5 @@
+package TikiShopMVC.Entity;
+
+public class CategoriesMapper {
+
+}
