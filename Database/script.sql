@@ -1,6 +1,9 @@
 CREATE DATABASE Tiki;
 
 USE Tiki;
+SELECT * FROM products WHERE id = 2;
+
+USE Tiki;
 CREATE TABLE slides (
 	id integer auto_increment,
     img varchar(255) not null,

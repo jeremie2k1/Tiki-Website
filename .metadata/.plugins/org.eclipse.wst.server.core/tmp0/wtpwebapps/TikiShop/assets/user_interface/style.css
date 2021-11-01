@@ -1,10 +1,10 @@
-body{background:url(assets/img/white_leather.png) repeat 0 0; }
+body{background:url(assets/user_interface/img/white_leather.png) repeat 0 0; }
 #header{padding:8px 0 8px;}
 #header a{text-decoration:none}
 #header p{padding:0; margin:0; line-height:1em; font-size:100%}
 #header h1{margin:0;line-height:1em }
 #header h1.dotmark{line-height:1.5em;}
-#header{ padding-top:44px;}
+#header{ padding-top:0px;}
 .logo {padding-top: 11px;display: block;}
 .logo span{display:none}
 .dotmark{padding:4px; font-size:14px; line-height:1.5em;  background:#fff; border:1px dashed rgb(252, 111, 0); margin:0; color:rgb(252, 111, 0); position:relative;}
@@ -50,7 +50,8 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .carousel-control.right{right: -15600px;}
 .carousel:hover .carousel-control.right{right: 8px; left: auto;}
 .carousel:hover .carousel-control.left{left: 8px;}
-.alignR{text-align:right;}
+.alignR{text-align:right; }
+.marginBottom {margin: 25px;}
 .control-label.alignL, .alignL{text-align:left;}
 .loginFrm{ margin-bottom:8px;}
 .loginFrm .control-group{padding:8px 14px 0; margin-bottom:0 }
@@ -112,3 +113,16 @@ hr.soften {margin: 8px 0;background: #DDD;}
 .gotop:hover {color: #fff;text-decoration: none;-moz-border-radius: 10px;-webkit-border-radius: 10px;border-radius: 10px;}
 #gototop{margin-top:1px;}
 #footerMenu a{ font-size:12px; text-transform:lowercase}
+.bannerImage {
+	background-image: url(img/slides/mainbannerEdited.jpg);
+	background-repeat: no-repeat;
+	background-size: 100%;
+	height: 390px;
+	margin-left: 0;
+	display: flex;
+	flex-direction: row-reverse;
+	align-items: flex-end;	
+}
+body {
+	background-color: rgb(177,214,242);
+}

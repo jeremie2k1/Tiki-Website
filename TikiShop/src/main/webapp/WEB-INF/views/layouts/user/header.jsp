@@ -3,25 +3,9 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <header id="header">
-	<div class="row">
-		<div class="span4">
-			<h1>
-				<a class="logo" href="index.html"><span>Twitter Bootstrap
-						ecommerce template</span> <img
-					src="<c:url value="/assets/user_interface/img/logo-bootstrap-shoping-cart.png"/>"
-					alt="bootstrap sexy shop"> </a>
-			</h1>
-		</div>
-		<div class="span4">
-			<div class="offerNoteWrapper">
-				<h1 class="dotmark">
-					<i class="icon-cut"></i> Twitter Bootstrap shopping cart HTML
-					template is available @ $14
-				</h1>
-			</div>
-		</div>
-		<div class="span4 alignR">
-			<p>
+	<div class="row bannerImage">
+		<div class="span4 alignR marginBottom">
+			<p style="color:pink;">
 				<br> <strong> Support (24/7) : 0800 1234 678 </strong><br>
 				<br>
 			</p>
@@ -30,6 +14,7 @@
 				class="btn btn-warning btn-mini">$</span> <span class="btn btn-mini">&pound;</span>
 			<span class="btn btn-mini">&euro;</span>
 		</div>
+
 	</div>
 </header>
 

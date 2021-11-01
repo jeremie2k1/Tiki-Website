@@ -12,8 +12,8 @@ import TikiShopMVC.Dto.ProductDTO;
 public class CategoryImplService implements ICategoryService{
 	@Autowired
 	private ProductDao productDao;
-	public List<ProductDTO> GetDataProductsPaginate(int start, int end, String id) {	
-		return productDao.getProductsToPaginate(start, end, id);
+	public List<ProductDTO> GetDataProductsPaginate(int start, int totalPerPage, String id) {	
+		return productDao.getProductsToPaginate(start, totalPerPage, id);
 	}
 	public List<ProductDTO> GetProductsById(String id) {
 		return productDao.getProductsById(id);

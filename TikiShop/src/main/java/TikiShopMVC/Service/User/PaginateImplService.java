@@ -23,7 +23,7 @@ public class PaginateImplService {
 	}
 	
 	private int FindStart(int currentPage, int limit) {
-		return ((currentPage - 1) * limit ) + 1;
+		return ((currentPage - 1) * limit );
 	}
 
 	private int FindEnd(int start, int limit, int totalData) {

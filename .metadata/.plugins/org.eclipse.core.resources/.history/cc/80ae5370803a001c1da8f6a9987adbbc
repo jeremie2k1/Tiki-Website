@@ -1,0 +1,17 @@
+package TikiShopMVC.Service.User;
+
+import java.util.List;
+
+import TikiShopMVC.Dao.ProductDao;
+import TikiShopMVC.Dto.ProductDTO;
+
+public class ProducImplService implements IProductService{
+
+	ProductDao productDao = new ProductDao();
+	
+	public List<ProductDTO> GetProductById(int id) {
+		
+		return productDao.;
+	}
+	
+}

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.CategoryMapper"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.MenuMapper"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
@@ -13,16 +12,18 @@
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.Slide"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.Category"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.Menu"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="TikiShopMVC.Dto.ProductDTO"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
-    <fullyQualifiedTypeName name="TikiShopMVC.Dao.ProductDao"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Service.User.CategoryImplService"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Service.User.PaginateImplService"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Dto.PaginateDto"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
+    <fullyQualifiedTypeName name="TikiShopMVC.Dto.ProductDTO"/>
+    <fullyQualifiedTypeName name="TikiShopMVC.Dao.ProductDao"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="TikiShopMVC.Service.User.IProductService"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
 </qualifiedTypeNameHistroy>

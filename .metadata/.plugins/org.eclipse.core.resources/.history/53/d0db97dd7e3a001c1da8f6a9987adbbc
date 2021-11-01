@@ -1,0 +1,5 @@
+package TikiShopMVC.Service.User;
+
+public interface IProductService {
+
+}

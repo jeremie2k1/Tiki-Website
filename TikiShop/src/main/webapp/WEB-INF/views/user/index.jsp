@@ -152,7 +152,7 @@ New Products
 							<div class="thumbnail">
 								<a class="zoomTool" href="#"
 									title="add to cart"><span class="icon-search"></span> QUICK
-									VIEW</a> <a href="chi-tiet-san-pham/${ item.id_product }"><img
+									VIEW</a> <a href="product-detail/${ item.id_product }"><img
 									src="<c:url value="/assets/user_interface/bookImgs/${ item.image }"/>"
 									alt=""></a>
 								<div class="caption">

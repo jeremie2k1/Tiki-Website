@@ -1,5 +1,6 @@
 package TikiShopMVC.Dao;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.stereotype.Repository;
@@ -26,14 +27,32 @@ public class ProductDao extends BaseDao {
 	}
 	
 	public List<ProductDTO> getProductsById(String id) {
-		String productByCategory = "SELECT * FROM products WHERE id_category = '" + id + "' " + " ORDER BY rand()"; 
+		String productByCategory = "SELECT * FROM products WHERE id_category = '" + id + "' "; 
+		List<ProductDTO> listProducts = _jdbcTemplate.query(productByCategory, new ProductDTOMapper());
+		return listProducts;
+	}
+	public List<ProductDTO> getProductsRelatedById(String id, long id_product) {
+		String productByCategory = "SELECT * FROM products WHERE id_category = '" + id + "' AND id != " + id_product; 
 		List<ProductDTO> listProducts = _jdbcTemplate.query(productByCategory, new ProductDTOMapper());
 		return listProducts;
 	}
 	
-	public List<ProductDTO> getProductsToPaginate(int start, int end, String id) {
-		String productByCategory = "SELECT * FROM products WHERE id_category = '" + id + "' ORDER BY rand() LIMIT " + start + ", " + end; 
+	public List<ProductDTO> getProductsToPaginate(int start, int totalPerPage, String id) {
+		String productByCategory = "SELECT * FROM products WHERE id_category = '" + id + "'"; 
 		List<ProductDTO> listProducts = _jdbcTemplate.query(productByCategory, new ProductDTOMapper());
-		return listProducts;
+		List<ProductDTO> listProduct = new ArrayList<ProductDTO>();
+		if (listProducts.size() > 0) {
+			String sqlProduct = "SELECT * FROM products WHERE id_category = '" + id + "' LIMIT " + start + ", " + totalPerPage; 
+			listProduct = _jdbcTemplate.query(sqlProduct, new ProductDTOMapper());
+		}
+		return listProduct;
 	}
+	
+	public List<ProductDTO> getProductById(long id) {
+		String productById = "SELECT * FROM products WHERE id = '" + id + "' LIMIT 1"; 
+		List<ProductDTO> product = _jdbcTemplate.query(productById, new ProductDTOMapper());
+		return product;
+	}
+	
+	
 }

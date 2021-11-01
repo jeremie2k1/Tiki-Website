@@ -1,0 +1,11 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+<%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
+<head>
+<meta charset="ISO-8859-1">
+<title>Detail Product</title>
+</head>
+<body>
+	<h1>This is page of Products</h1>
+</body>
+</html>
