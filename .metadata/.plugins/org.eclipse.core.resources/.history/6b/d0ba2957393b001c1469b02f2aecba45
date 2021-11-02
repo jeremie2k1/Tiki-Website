@@ -1,0 +1,13 @@
+package TikiShopMVC.Dao;
+
+import org.springframework.stereotype.Repository;
+
+import TikiShopMVC.Entity.User;
+
+@Repository
+public class UserDao extends BaseDao{
+	public int addAccount(User user){
+		int inserted = 0;
+		return inserted;
+	} 
+}

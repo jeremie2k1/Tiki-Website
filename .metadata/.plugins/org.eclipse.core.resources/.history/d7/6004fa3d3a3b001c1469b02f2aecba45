@@ -1,0 +1,11 @@
+package TikiShopMVC.Dao;
+
+import TikiShopMVC.Entity.User;
+
+public interface IUserDao {
+	public int save(User user);
+	 
+	 public void update(User user);
+	 
+	 public void deleteEmpById(long userId);
+}

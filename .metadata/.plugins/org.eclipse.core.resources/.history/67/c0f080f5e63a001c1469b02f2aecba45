@@ -1,0 +1,13 @@
+package TikiShopMVC.Dao;
+
+import java.util.HashMap;
+
+import TikiShopMVC.Dto.CartDTO;
+
+public class CartDao extends BaseDao {
+	public CartDTO AddCart(long id, HashMap<Long, CartDTO> cart) {
+		CartDTO itemCart = new CartDTO();
+		
+		return itemCart;
+	}
+}

@@ -40,8 +40,9 @@ Body Section
 								class="icon-circle-blank"></span> ${ item.name }</a></li>
 						<li>
 					</c:forEach>
-					
-					<li><a class="totalInCart" href="cart.html"><strong>Ordered<span class="badge badge-warning pull-right"
+
+					<li><a class="totalInCart" href="cart.html"><strong>Ordered<span
+								class="badge badge-warning pull-right"
 								style="line-height: 18px;">$448.42</span>
 						</strong></a></li>
 				</ul>
@@ -110,7 +111,7 @@ Body Section
 						<h2>${ product.name }</h2>
 						<hr class="soft" />
 
-						<form class="form-horizontal qtyFrm">
+						<form class="form-horizontal qtyFrm" method="GET" action="<c:url value="/AddCart/${ product.id_product }"/>">
 
 							<div class="control-group">
 								<label class="control-label"><span><h2>$ ${ product.price }</h2></span></label>
@@ -152,17 +153,18 @@ Body Section
 							<br>
 							<div style="display: flex; padding: 10px; align-items: center;">
 								<h5>Quantity</h5>
-								<div style="width:100px; margin-left: 100px;">
-									<input type="number" min="0" value="1" class="span6">
+								<div style="width: 50px; margin-left: 20px; margin-right: 20px;">
+									<input style="width: 100%;" type="number" min="0" value="1" class="span6">
+								</div>
+								<div>
+									<button type="submit" class="shopBtn">
+										<span class=" icon-shopping-cart"></span> Add to cart
+									</button>
 								</div>
 
 							</div>
 							<br>
-							<div style="text-align: center;">
-								<button type="submit" class="shopBtn">
-									<span class=" icon-shopping-cart"></span> Add to cart
-								</button>
-							</div>
+
 
 						</form>
 					</div>

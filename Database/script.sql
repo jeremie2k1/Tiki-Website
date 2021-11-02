@@ -55,4 +55,38 @@ CREATE TABLE menu (
 );
 
 USE Tiki;
-SELECT * FROM slides
+CREATE TABLE user (
+	id bigint auto_increment,
+    user varchar(255) not null,
+    password varchar(255) not null,
+    display_name varchar(100) not null,
+    address text,
+	primary key (id)
+);
+
+USE Tiki;
+CREATE TABLE bill (
+	id bigint auto_increment,
+    user varchar(255) not null,
+    phone varchar(100) not null,
+    full_name varchar(100) not null,
+    address varchar(255) not null,
+    total double not null,
+    quantity int not null,
+    note text,
+    primary key (id)
+);
+
+USE Tiki;
+CREATE TABLE bill_details (
+	id bigint auto_increment,
+    id_product bigint not null,
+    id_bill bigint not null,
+    quantity int not null,
+    total double not null,
+    
+    primary key (id),
+    foreign key (id_bill) references bill(id),
+    foreign key (id_product) references products(id)
+);
+

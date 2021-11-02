@@ -1,0 +1,13 @@
+package TikiShopMVC.Service.User;
+
+import org.mindrot.jbcrypt.BCrypt;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import TikiShopMVC.Entity.User;
+
+@Service
+public class AccountImplService implements IAccountService {
+
+
+}

@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import TikiShopMVC.Dto.PaginateDto;
+import TikiShopMVC.Dto.PaginateDTO;
 import TikiShopMVC.Service.User.CategoryImplService;
 import TikiShopMVC.Service.User.PaginateImplService;
 
@@ -24,7 +24,7 @@ public class CategoryController extends BaseController {
 		_mvShare.setViewName("user/products/category");
 		
 		int totalData = categoryService.GetProductsById(id).size();
-		PaginateDto paginateInfo = paginateService.GetInforPaginate(totalData, totalProductPerPage, 0);
+		PaginateDTO paginateInfo = paginateService.GetInforPaginate(totalData, totalProductPerPage, 0);
 		_mvShare.addObject("idCategory", id);
 		_mvShare.addObject("paginateInfo", paginateInfo); 
 		_mvShare.addObject("productsPaginate", categoryService.GetDataProductsPaginate(paginateInfo.getStart(), totalProductPerPage, id));
@@ -36,7 +36,7 @@ public class CategoryController extends BaseController {
 		_mvShare.setViewName("user/products/category");
 		
 		int totalData = categoryService.GetProductsById(id).size();
-		PaginateDto paginateInfo = paginateService.GetInforPaginate(totalData, totalProductPerPage, Integer.parseInt(currentPage));
+		PaginateDTO paginateInfo = paginateService.GetInforPaginate(totalData, totalProductPerPage, Integer.parseInt(currentPage));
 		
 		_mvShare.addObject("idCategory", id);
 		_mvShare.addObject("paginateInfo", paginateInfo); 

@@ -1,0 +1,58 @@
+package TikiShopMVC.Controller.User;
+
+import java.util.HashMap;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import TikiShopMVC.Dto.CartDTO;
+import TikiShopMVC.Service.User.CartImplService;
+
+@Controller
+public class CartController extends BaseController {
+	
+	@Autowired
+	private CartImplService cartService = new CartImplService();
+	
+	@RequestMapping(value = "AddCart/{id}")
+	public String AddCart(HttpServletRequest request, HttpSession session, @PathVariable long id) {
+		HashMap<Long, CartDTO> cart = (HashMap<Long, CartDTO>)session.getAttribute("ShoppingCart");
+		if (cart == null) {
+			cart = new HashMap<Long, CartDTO>();
+		}
+		cart = cartService.AddCart(id, cart);
+		session.setAttribute("ShoppingCart", cart);
+		session.setAttribute("TotalQuantityCart", cartService.TotalQuantity(cart));
+		session.setAttribute("TotalPriceCart", cartService.TotalPrice(cart));
+		session.setAttribute("TotalPoducts", cart.size());		
+		return "redirect:" + request.getHeader("Referer");
+	}
+	
+	@RequestMapping(value = "EditCart/{id}")
+	public String EditCart(HttpServletRequest request, HttpSession session, @PathVariable long id) {
+		HashMap<Long, CartDTO> cart = (HashMap<Long, CartDTO>)session.getAttribute("ShoppingCart");
+		if (cart == null) {
+			cart = new HashMap<Long, CartDTO>();
+		}		
+		return "redirect:" + request.getHeader("Referer");
+	}
+	
+	@RequestMapping(value = "DeleteCart/{id}")
+	public String DeleteCart(HttpServletRequest request, HttpSession session, @PathVariable long id) {
+		HashMap<Long, CartDTO> cart = (HashMap<Long, CartDTO>)session.getAttribute("ShoppingCart");
+		if (cart == null) {
+			cart = new HashMap<Long, CartDTO>();
+		}	
+		cart = cartService.DeleteCart(id, cart);
+		session.setAttribute("ShoppingCart", cart);
+		session.setAttribute("TotalQuantityCart", cartService.TotalQuantity(cart));
+		session.setAttribute("TotalPriceCart", cartService.TotalPrice(cart));
+		session.setAttribute("TotalPoducts", cart.size());
+		return "redirect:" + request.getHeader("Referer");
+	}
+}

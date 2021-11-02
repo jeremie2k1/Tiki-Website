@@ -2,9 +2,9 @@ package TikiShopMVC.Service.User;
 
 import org.springframework.stereotype.Service;
 
-import TikiShopMVC.Dto.PaginateDto;
+import TikiShopMVC.Dto.PaginateDTO;
 
 @Service
 public interface IPaginateService {
-	public PaginateDto GetInforPaginate(int totalData, int limit, int currentPage);
+	public PaginateDTO GetInforPaginate(int totalData, int limit, int currentPage);
 }

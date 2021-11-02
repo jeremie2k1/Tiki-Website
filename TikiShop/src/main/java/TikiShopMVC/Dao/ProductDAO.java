@@ -54,5 +54,9 @@ public class ProductDao extends BaseDao {
 		return product;
 	}
 	
-	
+	public ProductDTO findProductById(long id) {
+		String productById = "SELECT * FROM products WHERE id = '" + id + "' "; 
+		ProductDTO product = _jdbcTemplate.queryForObject(productById, new ProductDTOMapper());
+		return product;
+	}
 }

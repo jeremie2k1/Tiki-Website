@@ -126,3 +126,14 @@ hr.soften {margin: 8px 0;background: #DDD;}
 body {
 	background-color: rgb(177,214,242);
 }
+.contain-form {
+	width: 100%;
+}
+.main-form {
+	width: 400px;
+	margin: auto;
+	background-color: rgb(245,245,245);
+}
+.form-width {
+	width: 400px;
+}

@@ -1,13 +1,13 @@
 package TikiShopMVC.Dto;
 
-public class PaginateDto {
+public class PaginateDTO {
 	private int currentPage;
 	private int limit;
 	private int start;
 	private int end;
 	private int totalPage;
 	
-	public PaginateDto() {
+	public PaginateDTO() {
 		super();
 	}
 	

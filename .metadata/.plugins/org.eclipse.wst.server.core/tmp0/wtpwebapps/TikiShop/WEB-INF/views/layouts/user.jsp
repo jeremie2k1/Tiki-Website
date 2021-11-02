@@ -3,14 +3,13 @@
 <%@ taglib uri="http://www.opensymphony.com/sitemesh/decorator"
 	prefix="decorator"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>
-	<decorator:title default="Tiki shop"/>
-</title>
+<title><decorator:title default="Tiki shop" /></title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="">
 <meta name="author" content="">
@@ -27,7 +26,7 @@
 <!-- Favicons -->
 <link rel="shortcut icon"
 	href="<c:url value="/assets/user_interface/ico/favicon.ico"/>">
-<decorator:head/>
+<decorator:head />
 </head>
 <body>
 	<!-- 
@@ -45,12 +44,25 @@
 					</div>
 					<a class="active" href="index.html"> <span class="icon-home"></span>
 						Home
-					</a> <a href="#"><span class="icon-user"></span> My Account</a> <a
-						href="register.html"><span class="icon-edit"></span> Free
-						Register </a> <a href="contact.html"><span class="icon-envelope"></span>
-						Contact us</a> <a href="cart.html"><span
-						class="icon-shopping-cart"></span> 2 Item(s) - <span
-						class="badge badge-warning"> $448.42</span></a>
+					</a>
+					<c:if test="${ not empty LoginInfo }">
+						<a href="#" />
+						<span class="icon-user"></span> ${ LoginInfo.display_name }</a>
+						<a href="<c:url value="/logout"/>"><span class="icon-edit"></span>
+							Logout </a>
+					</c:if>
+					<c:if test="${ empty LoginInfo }">
+						<a href="<c:url value="/register"/>"><span class="icon-edit"></span>
+							Free Register </a>
+					</c:if>
+					<a href="contact.html"><span class="icon-envelope"></span>
+						Contact us</a>
+					<c:if test="${ TotalPoducts > 0}">
+						<a href="<c:url value="/cart"/>"><span
+							class="icon-shopping-cart"></span> ${ TotalQuantityCart } Item(s)
+							- <span class="badge badge-warning">$ ${ TotalPriceCart }
+						</span></a>
+					</c:if>
 				</div>
 			</div>
 		</div>
@@ -61,8 +73,8 @@ Lower Header Section
 -->
 	<div class="container">
 		<div id="gototop"></div>
-		
-		<%@include file="/WEB-INF/views/layouts/user/header.jsp" %>
+
+		<%@include file="/WEB-INF/views/layouts/user/header.jsp"%>
 
 		<decorator:body />
 
@@ -98,6 +110,7 @@ Lower Header Section
 	<script
 		src="<c:url value="/assets/user_interface/js/jquery.scrollTo-1.4.3.1-min.js"/>"></script>
 	<script src="<c:url value="/assets/user_interface/js/shop.js"/>"></script>
+	<decorator:getProperty property="page.script"></decorator:getProperty>
 </body>
 </html>
 

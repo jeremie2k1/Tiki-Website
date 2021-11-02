@@ -1,0 +1,14 @@
+package TikiShopMVC.Dao;
+
+import org.springframework.stereotype.Repository;
+
+import TikiShopMVC.Entity.User;
+
+@Repository
+public class UserDao extends BaseDao {
+	public int addAccount(User user) {
+		String query = "INSERT INTO user (user, password, display_name, address) VALUES ('" + user.getUser() + "', '" + user.getPassword() + "', '" + user.getDisplay_name() +"', '" + user.getAddress() + "')";
+		int inserted = _jdbcTemplate.update(query);
+		return inserted;
+	}
+}

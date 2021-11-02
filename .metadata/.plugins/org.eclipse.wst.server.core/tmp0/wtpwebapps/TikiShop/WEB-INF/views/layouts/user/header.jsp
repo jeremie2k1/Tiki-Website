@@ -5,14 +5,17 @@
 <header id="header">
 	<div class="row bannerImage">
 		<div class="span4 alignR marginBottom">
-			<p style="color:pink;">
+			<p style="color: pink;">
 				<br> <strong> Support (24/7) : 0800 1234 678 </strong><br>
 				<br>
 			</p>
-			<span class="btn btn-mini">[ 2 ] <span
-				class="icon-shopping-cart"></span></span> <span
-				class="btn btn-warning btn-mini">$</span> <span class="btn btn-mini">&pound;</span>
-			<span class="btn btn-mini">&euro;</span>
+			<c:if test="${ TotalPoducts > 0}">
+
+				<span class="btn btn-mini">[ ${ TotalPoducts } ] <span
+					class="icon-shopping-cart"></span></span>
+			</c:if>
+			<span class="btn btn-warning btn-mini">$</span> <span
+				class="btn btn-mini">&pound;</span> <span class="btn btn-mini">&euro;</span>
 		</div>
 
 	</div>
@@ -44,6 +47,7 @@ Navigation Bar Section
 					<input type="text" placeholder="Search" class="search-query span2">
 				</form>
 				<ul class="nav pull-right">
+					<c:if test="${ empty LoginInfo }">
 					<li class="dropdown"><a data-toggle="dropdown"
 						class="dropdown-toggle" href="#"><span class="icon-lock"></span>
 							Login <b class="caret"></b></a>
@@ -66,6 +70,10 @@ Navigation Bar Section
 								</div>
 							</form>
 						</div></li>
+						</c:if>
+						<c:if test="${ not empty LoginInfo }">
+							<li><a href="#">${ LoginInfo.display_name }<b class="caret"></b></a></li>
+						</c:if>
 				</ul>
 			</div>
 		</div>
