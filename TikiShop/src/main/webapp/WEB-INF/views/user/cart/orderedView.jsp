@@ -61,7 +61,7 @@
 				</table>
 				<br /> <a href="products.html" class="shopBtn btn-large"><span
 					class="icon-arrow-left"></span> Continue shopping </a> <a
-					href="login.html" class="shopBtn btn-large pull-right"> Pay <span
+					href="checkout" class="shopBtn btn-large pull-right"> Pay <span
 					class="icon-arrow-right"></span></a>
 
 			</div>

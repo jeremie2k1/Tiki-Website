@@ -2,7 +2,7 @@
 	pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
 <head>
-<meta charset="ISO-8859-1">
+<meta charset="UTF-8">
 <title>Detail Product</title>
 <style>
 .product-content {

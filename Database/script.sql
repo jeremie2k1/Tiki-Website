@@ -90,3 +90,6 @@ CREATE TABLE bill_details (
     foreign key (id_product) references products(id)
 );
 
+USE Tiki;
+SELECT * FROM bill_details;
+

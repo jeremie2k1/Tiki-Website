@@ -47,7 +47,7 @@
 					</a>
 					<c:if test="${ not empty LoginInfo }">
 						<a href="#" />
-						<span class="icon-user"></span> ${ LoginInfo.display_name }</a>
+						<span class="icon-user"></span> ${ LoginInfo.full_name }</a>
 						<a href="<c:url value="/logout"/>"><span class="icon-edit"></span>
 							Logout </a>
 					</c:if>

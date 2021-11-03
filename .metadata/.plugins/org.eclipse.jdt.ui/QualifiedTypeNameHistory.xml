@@ -2,7 +2,6 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.CategoryMapper"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.MenuMapper"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Dto.ProductDTOMapper"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.SlideMapper"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Dao.SlideDao"/>
@@ -20,9 +19,7 @@
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Dto.ProductDTO"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Dao.CartDao"/>
-    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PathVariable"/>
-    <fullyQualifiedTypeName name="TikiShopMVC.Dto.CartDTO"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Service.User.CartImplService"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -30,20 +27,26 @@
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.RowMapper"/>
     <fullyQualifiedTypeName name="java.sql.ResultSet"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="org.mindrot.jbcrypt.BCrypt"/>
     <fullyQualifiedTypeName name="org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate"/>
-    <fullyQualifiedTypeName name="java.util.Map"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Dao.IUserDao"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Dao.UserDao"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Service.User.AccountImplService"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.UserMapper"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpSession"/>
     <fullyQualifiedTypeName name="javax.servlet.http.HttpServletRequest"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMethod"/>
-    <fullyQualifiedTypeName name="TikiShopMVC.Entity.Bill"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="TikiShopMVC.Entity.User"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="TikiShopMVC.Dto.CartDTO"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.Map.Entry"/>
+    <fullyQualifiedTypeName name="TikiShopMVC.Dao.BillsDao"/>
+    <fullyQualifiedTypeName name="TikiShopMVC.Entity.Bill"/>
+    <fullyQualifiedTypeName name="TikiShopMVC.Service.User.BillsImplService"/>
+    <fullyQualifiedTypeName name="TikiShopMVC.Entity.BillDetails"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Repository"/>
 </qualifiedTypeNameHistroy>

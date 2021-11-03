@@ -4,7 +4,7 @@ public class Bill {
 	private long id;
 	private String user;
 	private String phone;
-	private String display_name;
+	private String full_name;
 	private String address;
 	private double total;
 	private int quantity;
@@ -31,11 +31,11 @@ public class Bill {
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getDisplay_name() {
-		return display_name;
+	public String getFull_name() {
+		return full_name;
 	}
-	public void setDisplay_name(String display_name) {
-		this.display_name = display_name;
+	public void setFull_name(String full_name) {
+		this.full_name = full_name;
 	}
 	public String getAddress() {
 		return address;

@@ -2,8 +2,10 @@
 	pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/layouts/user/taglib.jsp"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
 
-<title>Pay</title>
+
+<title>Checkout</title>
 <body>
 	<div class="row">
 		<div id="sidebar" class="span3">
@@ -95,6 +97,7 @@
 			</div>
 		</div>
 
+		<!-- Register -->
 		<div class="span9">
 			<ul class="breadcrumb">
 				<li><a href="index.html">Home</a> <span class="divider">/</span></li>
@@ -106,12 +109,12 @@
 			<div class="row">
 				<div class="span9">
 					<div class="well">
+						<h2>YOUR INFORMATION</h2>
 						<br />
-						<form:form action="checkout" method="POST" modelAtribute="bill"
-							class="form-horizontal">
-							<h3>PAY YOUR ORDER</h3>
+						<form:form action="checkout" method="post" modelAttribute="bill" class="form-horizontal">
+							<h3>Payment order</h3>
 							<div class="control-group">
-								<label class="control-label">Full name<sup>*</sup></label>
+								<label class="control-label">Full name <sup>*</sup></label>
 								<div class="controls">
 									<form:input type="text" placeholder="Full name"
 										path="full_name" />
@@ -120,42 +123,38 @@
 							<div class="control-group">
 								<label class="control-label">Email <sup>*</sup></label>
 								<div class="controls">
-									<form:input type="text" class="span3" placeholder="Email"
-										path="user" />
+									<form:input type="email"
+										placeholder="Email" path="user" />
 								</div>
 							</div>
 							<div class="control-group">
-								<label class="control-label">Contact <sup>*</sup></label>
+								<label class="control-label">Phone <sup>*</sup></label>
 								<div class="controls">
-									<form:input type="text" class="span3" placeholder="Contact"
-										path="phone" />
+									<form:input type="text"
+										placeholder="Phone" path="phone" />
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label">Address <sup>*</sup></label>
 								<div class="controls">
-									<form:textarea path="address" rows="5" cols="30" />
+									<form:textarea rows="5" cols="30" path="address" />
 								</div>
 							</div>
 							<div class="control-group">
 								<label class="control-label">Notice <sup>*</sup></label>
 								<div class="controls">
-									<form:textarea path="note" rows="5" cols="30" />
+									<form:textarea rows="5" cols="30" path="note" />
 								</div>
 							</div>
+							
+							
 
-							<div class="control-group">
-								<div class="controls">
-									<input type="submit" name="submitAccount" value="Order"
-										class="shopBtn exclusive">
-								</div>
+							<div class="controls">
+								<button type="submit" class="defaultBtn">Pay</button>
 							</div>
 						</form:form>
 					</div>
-				</div>
-
-				<div class="span1">&nbsp;</div>
-
+				</div>				
 			</div>
 
 		</div>

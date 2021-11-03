@@ -30,11 +30,11 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	public String getDisplay_name() {
-		return display_name;
+	public String getFull_name() {
+		return full_name;
 	}
-	public void setDisplay_name(String display_name) {
-		this.display_name = display_name;
+	public void setFull_name(String full_name) {
+		this.full_name = full_name;
 	}
 	public String getAddress() {
 		return address;

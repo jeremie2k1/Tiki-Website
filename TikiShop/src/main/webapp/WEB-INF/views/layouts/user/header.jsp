@@ -72,7 +72,7 @@ Navigation Bar Section
 						</div></li>
 						</c:if>
 						<c:if test="${ not empty LoginInfo }">
-							<li><a href="#">${ LoginInfo.display_name }<b class="caret"></b></a></li>
+							<li><a href="#">${ LoginInfo.full_name }<b class="caret"></b></a></li>
 						</c:if>
 				</ul>
 			</div>

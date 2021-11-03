@@ -2,11 +2,12 @@ package TikiShopMVC.Entity;
 
 public class BillDetails {
 	private long id;
+	private long id_bill;
 	private long id_product;
 	private int quantity;
 	private double total;
 	
-	private BillDetails() {
+	public BillDetails() {
 		super();
 	}
 
@@ -18,6 +19,14 @@ public class BillDetails {
 		this.id = id;
 	}
 
+	public long getId_bill() {
+		return id_bill;
+	}
+
+	public void setId_bill(long id_bill) {
+		this.id_bill = id_bill;
+	}
+	
 	public long getId_product() {
 		return id_product;
 	}

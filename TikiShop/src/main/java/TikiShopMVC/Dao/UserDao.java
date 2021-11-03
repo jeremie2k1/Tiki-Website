@@ -8,7 +8,7 @@ import TikiShopMVC.Entity.UserMapper;
 @Repository
 public class UserDao extends BaseDao {
 	public int addAccount(User user) {
-		String query = "INSERT INTO user (user, password, display_name, address) VALUES ('" + user.getUser() + "', '" + user.getPassword() + "', '" + user.getDisplay_name() +"', '" + user.getAddress() + "')";
+		String query = "INSERT INTO user (user, password, display_name, address) VALUES ('" + user.getUser() + "', '" + user.getPassword() + "', '" + user.getFull_name() +"', '" + user.getAddress() + "')";
 		int inserted = _jdbcTemplate.update(query);
 		return inserted;
 	}

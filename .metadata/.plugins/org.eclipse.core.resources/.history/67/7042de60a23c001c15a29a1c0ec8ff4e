@@ -1,0 +1,36 @@
+package TikiShopMVC.Service.User;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import TikiShopMVC.Dao.BillsDao;
+import TikiShopMVC.Dto.CartDTO;
+import TikiShopMVC.Entity.Bill;
+
+@Service
+public class BillsImplService implements IBillsService{
+	@Autowired
+	private BillsDao billsDao;
+
+	public int AddBills(Bill bill) {
+		return billsDao.AddBills(bill);
+	}
+
+	public void AddBillsDetails(HashMap<Long, CartDTO> carts) {
+		long idBills = billsDao.GetIDLastBills();
+		
+		for (Map.Entry<Long, CartDTO> itemCart : carts.entrySet()) {
+			BillDetail billDetail = new BillDetail();
+			billDetail.setId_bills(idBills);
+			billDetail.setId_product(itemCart.getValue().getProduct().getId_product());
+			billDetail.setQuantity(itemCart.getValue().getQuantity());
+			billDetail.setTotal(itemCart.getValue().getTotalPrice());
+			
+			billsDao.AddBillsDetail(billDetail)
+		}
+	}
+
+}

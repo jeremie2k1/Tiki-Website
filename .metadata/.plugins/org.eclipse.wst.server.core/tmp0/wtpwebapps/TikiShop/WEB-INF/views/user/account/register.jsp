@@ -123,7 +123,7 @@
 									name</label>
 								<div class="controls">
 									<form:input class="span3" type="text"
-										placeholder="Display name" path="display_name" />
+										placeholder="Display name" path="full_name" />
 								</div>
 							</div>
 							<div class="control-group">

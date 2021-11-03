@@ -33,10 +33,12 @@ public class UserController extends BaseController {
 	}
 	
 	@RequestMapping(value = "/register", method=RequestMethod.POST)
-	public ModelAndView CreateAccount(@ModelAttribute("user") User user) {
+	public ModelAndView CreateAccount(HttpSession session, @ModelAttribute("user") User user) {
 		int count = accountService.AddAccount(user);
 		if (count > 0) {
 			_mvShare.addObject("statusRegister", "Success!");
+			_mvShare.setViewName("redirect:home");
+			session.setAttribute("LoginInfo", user);
 		}
 		else {
 			_mvShare.addObject("statusRegister","Something wrong!");
