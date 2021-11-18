@@ -1,5 +1,0 @@
-package TikiShopMVC.Service.User;
-
-public interface ICategoryService {
-
-}
