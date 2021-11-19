@@ -191,8 +191,8 @@
 
 # ER-диаграмма
 
-![ER-diagram](http://github.com/jeremie2k1/Tiki-Web/blob/Database/er_diagram.png)
+![ER-diagram](https://github.com/jeremie2k1/Tiki-Website/blob/master/Database/ERD.png)
 
 # Даталогическая модель
 
-![MD-diagram](http://github.com/jeremie2k1/Tiki-Web/blob/Database/modelData.png)
+![MD-diagram](https://github.com/jeremie2k1/Tiki-Website/blob/master/Database/er_diagram.png)
