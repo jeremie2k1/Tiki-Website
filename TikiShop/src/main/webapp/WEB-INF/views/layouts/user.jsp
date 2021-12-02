@@ -85,19 +85,14 @@ Lower Header Section
 
 	<div class="copyright">
 		<div class="container">
-			<p class="pull-right">
-				<a href="#"><img src="/assets/user_interface/img/maestro.png"
+			<p class="pull-right" style="margin-right:10px;">
+				<a href="#"><img src="<c:url value="/assets/user_interface/img/maestro.png"/>"
 					alt="payment"></a> <a href="#"><img
-					src="/assets/user_interface/img/mc.png" alt="payment"></a> <a
-					href="#"><img src="/assets/user_interface/img/pp.png"
+					src="<c:url value="/assets/user_interface/img/mc.png"/>" alt="payment"></a> <a
+					href="#"><img src="<c:url value="/assets/user_interface/img/pp.png"/>"
 					alt="payment"></a> <a href="#"><img
-					src="/assets/user_interface/img/visa.png" alt="payment"></a> <a
-					href="#"><img src="/assets/user_interface/img/disc.png"
-					alt="payment"></a>
+					src="<c:url value="/assets/user_interface/img/visa.png"/>" alt="payment"></a>
 			</p>
-			<span>Copyright &copy; 2013<br> bootstrap ecommerce
-				shopping template
-			</span>
 		</div>
 	</div>
 	<a href="#" class="gotop"><i class="icon-double-angle-up"></i></a>

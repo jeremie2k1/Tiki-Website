@@ -1,5 +1,8 @@
 USE Tiki;
 
+INSERT INTO user (user, password, display_name, address)
+VALUES ('admin', '123', 'Admin', 'Saint Petersburg');
+
 USE Tiki;
 INSERT INTO slides (img, caption, content)
 VALUES ('slide_1.jpg', 'Fantasy and sci-fi novels', 'Best of Duncan M. Hamilton');

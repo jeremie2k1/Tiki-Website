@@ -114,7 +114,7 @@
 								<label class="control-label" for="inputEmail">E-mail
 									address</label>
 								<div class="controls">
-									<form:input class="span3" type="email" placeholder="Email"
+									<form:input class="span3" type="text" placeholder="Email"
 										path="user" />
 								</div>
 							</div>
@@ -168,7 +168,7 @@
 							<div class="control-group">
 								<label class="control-label" for="inputEmail">Email</label>
 								<div class="controls">
-									<form:input class="span3" type="email" placeholder="Email"
+									<form:input class="span3" type="text" placeholder="Email"
 										path="user" />
 								</div>
 							</div>

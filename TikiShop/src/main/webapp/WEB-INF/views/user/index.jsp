@@ -38,7 +38,7 @@ Body Section
 			</div>
 			<div class="well well-small">
 				<a href="#"><img
-					src="<c:url value="/assets/user/img/paypal.jpg"/>"
+					src="<c:url value="/assets/user_interface/img/paypal.jpg"/>"
 					alt="payment method paypal"></a>
 			</div>
 
@@ -145,8 +145,9 @@ New Products
 	-->
 		<div class="well well-small">
 			<h3>
-				<a class="btn btn-mini pull-right" href="products.html"
+				<a class="btn btn-mini pull-right" href="<c:url value="/bill"/>"
 					title="View more">View More<span class="icon-plus"></span></a>
+					
 				Highlights Books
 			</h3>
 			<hr class="soften" />

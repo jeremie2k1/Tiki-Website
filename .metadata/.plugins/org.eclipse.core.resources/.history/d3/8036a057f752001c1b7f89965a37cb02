@@ -1,0 +1,18 @@
+package TikiShopMVC.Entity;
+
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import org.springframework.jdbc.core.RowMapper;
+
+public class AdminMapper implements RowMapper<Admin>{
+	public Admin mapRow(ResultSet rs, int rowNum) throws SQLException {
+		Admin admin = new Admin();
+		admin.setId(rs.getLong("id"));
+		admin.setAdmin(rs.getString("user"));
+		admin.setFull_name(rs.getString("display_name"));
+		admin.setPassword(rs.getString("password"));
+		admin.setAddress(rs.getString("address"));
+		return admin;
+	}
+}

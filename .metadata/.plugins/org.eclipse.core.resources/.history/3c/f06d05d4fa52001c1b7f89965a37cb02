@@ -1,0 +1,5 @@
+package TikiShopMVC.Controller.Admin;
+
+public class AdminCategoryController {
+
+}

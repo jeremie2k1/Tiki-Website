@@ -30,6 +30,19 @@ public class AccountImplService implements IAccountService {
 		
 		return null;
 	}
+	
+	public User CheckAdmin(User admin) {
+		String currentPassword = admin.getPassword();
+		admin = userDao.getUserByAccount(admin);
+		if (admin != null) {
+			if (currentPassword == "123") {
+				return admin;
+			}
+			return null;
+		}
+		
+		return null;
+	}
 
 
 }
