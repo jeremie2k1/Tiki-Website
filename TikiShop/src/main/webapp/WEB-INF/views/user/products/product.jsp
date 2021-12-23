@@ -56,7 +56,7 @@ Body Section
 				</p>
 			</div>
 			<div class="well well-small">
-				<a href="#"><img src="assets/img/paypal.jpg"
+				<a href="#"><img src="<c:url value="/assets/user_interface/img/paypal.jpg"/>"
 					alt="payment method paypal"></a>
 			</div>
 

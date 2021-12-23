@@ -49,7 +49,7 @@ Body Section
 					<li>
 						<div class="thumbnail">
 							<a class="zoomTool" href="product_details.html"
-								title="add to cart"><span class="icon-search"></span> QUICK
+								title="view details"><span class="icon-search"></span> QUICK
 								VIEW</a> <img
 								src="<c:url value="/assets/user_interface/bookImgs/${ item.image }"/>"
 								alt="bootstrap ecommerce templates">
@@ -112,10 +112,10 @@ New Products
 									<c:forEach var="item" items="${ news }" varStatus="loop">
 										<li class="span3">
 											<div class="thumbnail">
-												<a class="zoomTool" href="product_details.html"
+												<a class="zoomTool" href="product-detail/${ item.id_product }"
 													title="add to cart"><span class="icon-search"></span>
 													QUICK VIEW</a> <a
-													href="<c:url value="/AddCart/${ product.id_product }"/>"><img
+													href="product-detail/${ item.id_product }"><img
 													src="<c:url value="/assets/user_interface/bookImgs/${ item.image }"/>"
 													alt=""></a>
 											</div>
@@ -145,7 +145,7 @@ New Products
 	-->
 		<div class="well well-small">
 			<h3>
-				<a class="btn btn-mini pull-right" href="<c:url value="/bill"/>"
+				<a class="btn btn-mini pull-right" href="#"
 					title="View more">View More<span class="icon-plus"></span></a>
 					
 				Highlights Books
@@ -159,7 +159,7 @@ New Products
 						<c:forEach var="item" items="${ products }" varStatus="loop">
 							<li class="span4">
 								<div class="thumbnail">
-									<a class="zoomTool" href="#" title="add to cart"><span
+									<a class="zoomTool" href="product-detail/${ item.id_product }" title="add to cart"><span
 										class="icon-search"></span> QUICK VIEW</a> <a
 										href="product-detail/${ item.id_product }"><img
 										src="<c:url value="/assets/user_interface/bookImgs/${ item.image }"/>"
@@ -167,7 +167,7 @@ New Products
 									<div class="caption">
 										<h5>${ item.name }</h5>
 										<h4>
-											<a class="defaultBtn" href="product_details.html"
+											<a class="defaultBtn" href="product-detail/${ item.id_product }"
 												title="Click to view"><span class="icon-zoom-in"></span></a>
 											<a class="shopBtn"
 												href="<c:url value="/AddCart/${ item.id_product }"/>"
@@ -194,8 +194,8 @@ New Products
 		</div>
 		<hr>
 		<div class="well well-small">
-			<a class="btn btn-mini pull-right" href="#">Xem thêm <span
-				class="icon-plus"></span></a> All products
+			<a class="btn btn-mini pull-right" href="<c:url value="/bill"/>">Xem thêm <span
+				class="icon-plus"></span></a> All bills
 		</div>
 	</div>
 

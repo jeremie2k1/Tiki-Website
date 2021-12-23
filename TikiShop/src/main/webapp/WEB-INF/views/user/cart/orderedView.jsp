@@ -14,7 +14,7 @@
 			</ul>
 			<div class="well well-small">
 				<h1>
-					Cart <small class="pull-right"> 2 item(s) ordered </small>
+					Cart <small class="pull-right"> </small>
 				</h1>
 				<hr class="soften" />
 
@@ -59,7 +59,7 @@
 
 					</tbody>
 				</table>
-				<br /> <a href="products.html" class="shopBtn btn-large"><span
+				<br /> <a href="/TikiShop/" class="shopBtn btn-large"><span
 					class="icon-arrow-left"></span> Continue shopping </a> <a
 					href="checkout" class="shopBtn btn-large pull-right"> Pay <span
 					class="icon-arrow-right"></span></a>

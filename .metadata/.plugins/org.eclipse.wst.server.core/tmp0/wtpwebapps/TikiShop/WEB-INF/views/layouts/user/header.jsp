@@ -9,11 +9,8 @@
 				<br> <strong> Support (24/7) : 0800 1234 678 </strong><br>
 				<br>
 			</p>
-			<c:if test="${ TotalPoducts > 0}">
-
 				<span class="btn btn-mini">[ ${ TotalPoducts } ] <span
 					class="icon-shopping-cart"></span></span>
-			</c:if>
 			<span class="btn btn-warning btn-mini">$</span> <span
 				class="btn btn-mini">&pound;</span> <span class="btn btn-mini">&euro;</span>
 		</div>
@@ -35,12 +32,12 @@ Navigation Bar Section
 				<ul class="nav">
 					<c:forEach var="item" items="${ menus }" varStatus="index">
 						<c:if test="${ index.first }">
-							<li class="active">
+							<li class="">
 						</c:if>
 						<c:if test="${ not index.first }">
 							<li class="">
 						</c:if>
-						<a href="index.html">${ item.name } </a>
+						<a href="/TikiShop/">${ item.name } </a>
 					</c:forEach>
 				</ul>
 				<form action="#" class="navbar-search pull-left">

@@ -106,7 +106,15 @@ public class CartController extends BaseController {
 			billsService.AddBillsDetails(carts);
 		}
 		session.removeAttribute("ShoppingCart");
-		return "redirect:cart";
+		HashMap<Long, CartDTO> cart = (HashMap<Long, CartDTO>)session.getAttribute("ShoppingCart");
+		if (cart == null) {
+			cart = new HashMap<Long, CartDTO>();
+		}
+		session.setAttribute("ShoppingCart", cart);
+		session.setAttribute("TotalQuantityCart", cartService.TotalQuantity(cart));
+		session.setAttribute("TotalPriceCart", Math.round(cartService.TotalPrice(cart) * 100.00) / 100.0);
+		session.setAttribute("TotalPoducts", cart.size());
+		return "redirect:/home";
 	}
 	
 }
